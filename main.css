@@ -1,11 +1,16 @@
-body{
-  padding: 30px;
-  background-image: url('https://iitcoa3rdyr.files.wordpress.com/2014/02/black-and-white-detroit-skyline.jpg');
-  color: white;
-  font-size: 19px;
-  font-family: Avenir;
+body {
+    padding: 30px;
+    background-image: url('https://iitcoa3rdyr.files.wordpress.com/2014/02/black-and-white-detroit-skyline.jpg');
+    color: white;
+    font-size: 19px;
+    font-family: Avenir;
 }
-
 #button {
-  border: 1px solid white;
+    border: 1px solid white;
+}
+#email {
+    padding-left: 55px;
+}
+#username {
+    padding-left: 55px;
 }
