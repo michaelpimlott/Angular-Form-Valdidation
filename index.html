@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,48 +10,49 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <style>
-        body    { padding-top:30px; }
-    </style>
+    <link rel="stylesheet" href="main.css">
+
     <script src="http://code.angularjs.org/1.2.6/angular.js"></script>
     <script src="app.js"></script>
-  </head>
+</head>
 
-  <body ng-app="testApp" ng-controller="mainController">
-  <div class="container">
-  <div class="col-sm-8 col-sm-offset-2">
-    <div class="page-header"><h1>Let's Make A Form!</h1></div>
+<body ng-app="testApp" ng-controller="mainController">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="page-header">
+                <h1>Why Not? Let's Make A Form.</h1></div>
 
-    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+            <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
 
-    <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
-              <label>Name</label>
-              <input type="text" name="name" class="form-control" ng-model="name" required>
-              <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Give us your name, Sweetie.</p>
+                <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" ng-model="name" required>
+                    <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Give us your name, Sweetie.</p>
+                </div>
+
+                <div class="form-group" "{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="10">
+                    <p ng-show="userForm.username.$error.minlength" class="help-block">It's just a little fella. How's about making it a bit larger?</p>
+                    <p ng-show="userForm.username.$error.maxlength" class="help-block">Don't be a hero. Make it shorter, why don't you?</p>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" ng-model="email">
+                    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Do you think I was born yesterday? I know what emails look like.</p>
+                </div>
+
+                <button id="button" type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+
+            </form>
+
+        </div>
     </div>
-
-    <div class="form-group" "{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
-            <label>Username</label>
-            <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="10">
-            <p ng-show="userForm.username.$error.minlength" class="help-block">It's just a little fella. How's about making it a bit larger?.</p>
-            <p ng-show="userForm.username.$error.maxlength" class="help-block">Don't be a hero. Make it shorter, why don't you?</p>
-    </div>
-
-    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-            <label>Email</label>
-            <input type="email" name="email" class="form-control" ng-model="email">
-            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Do you think I was born yesterday? I know what emails look like.</p>
-    </div>
-
-    <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
-
-    </form>
-
-</div>
-</div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </body>
+</body>
+
 </html>

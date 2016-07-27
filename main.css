@@ -1,0 +1,11 @@
+body{
+  padding: 30px;
+  background-image: url('https://iitcoa3rdyr.files.wordpress.com/2014/02/black-and-white-detroit-skyline.jpg');
+  color: white;
+  font-size: 19px;
+  font-family: Avenir;
+}
+
+#button {
+  border: 1px solid white;
+}
